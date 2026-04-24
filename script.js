@@ -76,9 +76,10 @@ function mostrarFinal() {
   }, 50);
 
   escribirTexto("mensajeCarta",
-`Asi como las flores
+`Y hoy te regalo esta rosa
 
-Todo lo lindo va creciendo poco a poco,
+Por todas esas pequeñas cosas que haces,
+y te hacen florecer como persona
 
 Feliz Saint Jordi`);
 
