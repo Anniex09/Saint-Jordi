@@ -81,7 +81,7 @@ function mostrarFinal() {
 Por todas esas pequeñas cosas que haces,
 y te hacen florecer como persona
 
-Feliz Saint Jordi`);
+Feliz Dia de Saint Jordi`);
 
 document.getElementById("carta").addEventListener("click", function(e) {
   if (e.target.id === "carta") {
