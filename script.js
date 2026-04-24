@@ -76,10 +76,10 @@ function mostrarFinal() {
   }, 50);
 
   escribirTexto("mensajeCarta",
-`Y hoy te regalo esta rosa
+`Y hoy te regalo esta rosa<br>
 
 Por todas esas pequeñas cosas que haces,
-y te hacen florecer como persona
+y te hacen florecer como persona<br>
 
 Feliz Dia de Saint Jordi`);
 
