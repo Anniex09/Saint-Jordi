@@ -90,7 +90,7 @@ document.getElementById("carta").addEventListener("click", function(e) {
 
 function escribirTexto(id, texto) {
   let i = 0;
-  let velocidad = 40;
+  let velocidad = 35;
   let elemento = document.getElementById(id);
   elemento.innerHTML = "";
 
@@ -98,12 +98,15 @@ function escribirTexto(id, texto) {
 
   function escribir() {
 
-    // 👇 Detectar <br>
-    if (texto.substring(i, i + 4) === "<br>") {
-      elemento.innerHTML += "<br>";
-      i += 4;
+    // 👇 Detecta etiquetas HTML completas
+    if (texto[i] === "<") {
+      let cierre = texto.indexOf(">", i);
+      let etiqueta = texto.substring(i, cierre + 1);
+
+      elemento.innerHTML += etiqueta;
+      i = cierre + 1;
     } else {
-      elemento.innerHTML += texto.charAt(i);
+      elemento.innerHTML += texto[i];
       i++;
     }
 
