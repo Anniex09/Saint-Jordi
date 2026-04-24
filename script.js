@@ -10,7 +10,7 @@ const imagenes = [
 const textos = [
   "Todo comienza con algo pequeño...",
   "Crece poco a poco, incluso cuando no lo vemos...",
-  "Y un día, florece 🌹"
+  "Y un día, florece"
 ];
 
 const boton = document.getElementById("boton");
@@ -76,12 +76,11 @@ function mostrarFinal() {
   }, 50);
 
   escribirTexto("mensajeCarta",
-`Hoy no puedo darte una rosa real...
+`Asi como las flores
 
-Pero quería darte algo que creciera,
-aunque fuera poco a poco.
+Todo lo lindo va creciendo poco a poco,
 
-Como lo que siento por ti 💌`);
+Feliz Saint Jordi`);
 
 document.getElementById("carta").addEventListener("click", function(e) {
   if (e.target.id === "carta") {
