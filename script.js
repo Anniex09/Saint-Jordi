@@ -74,14 +74,11 @@ function mostrarFinal() {
   setTimeout(() => {
     carta.classList.add("mostrar");
   }, 50);
-
-  escribirTexto("mensajeCarta",
-`Y hoy te regalo esta rosa<br>
-
-Por todas esas pequeñas cosas que haces,
-y te hacen florecer como persona<br>
-
-Feliz Dia de Saint Jordi`);
+escribirTexto("mensajeCarta",
+`Y hoy te regalo esta rosa<br><br>
+Por todas esas pequeñas cosas que haces,<br>
+y te hacen florecer como persona<br><br>
+Feliz Día de Sant Jordi 💌`);
 
 document.getElementById("carta").addEventListener("click", function(e) {
   if (e.target.id === "carta") {
@@ -97,15 +94,23 @@ function escribirTexto(id, texto) {
   let elemento = document.getElementById(id);
   elemento.innerHTML = "";
 
-  escribiendo = true; // 🔒 empieza bloqueo
+  escribiendo = true;
 
   function escribir() {
-    if (i < texto.length) {
+
+    // 👇 Detectar <br>
+    if (texto.substring(i, i + 4) === "<br>") {
+      elemento.innerHTML += "<br>";
+      i += 4;
+    } else {
       elemento.innerHTML += texto.charAt(i);
       i++;
+    }
+
+    if (i < texto.length) {
       setTimeout(escribir, velocidad);
     } else {
-      escribiendo = false; // 🔓 se desbloquea al terminar
+      escribiendo = false;
     }
   }
 
